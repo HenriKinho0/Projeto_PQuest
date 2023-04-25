@@ -1,8 +1,10 @@
 package view;
 
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Cursor;
@@ -10,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaSelecName extends JFrame {
-	private JTextField textField;
+	private JTextField textNome;
 
 
 	/**
@@ -45,17 +47,22 @@ public class TelaSelecName extends JFrame {
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(85, 45, 153, 20);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		textNome = new JTextField();
+		textNome.setBounds(85, 45, 153, 20);
+		getContentPane().add(textNome);
+		textNome.setColumns(10);
 		
 		JButton btnCriar = new JButton("Criar");
 		btnCriar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaCenario cenario = new TelaCenario();
-				cenario.setVisible(true);
-				dispose();
+				if (textNome.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Ops, digite um nome!", "Aviso", JOptionPane.WARNING_MESSAGE);
+					return;
+				} else {
+					TelaCenario cenario = new TelaCenario();
+					cenario.setVisible(true);
+					dispose();
+				}
 			}
 		});
 		btnCriar.setFocusable(false);
