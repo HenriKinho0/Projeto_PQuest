@@ -12,8 +12,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaLogin extends JFrame {
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField textUsuario;
+	private JPasswordField passwordSenha;
 
 
 	/**
@@ -49,14 +49,14 @@ public class TelaLogin extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(183, 102, 195, 26);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		textUsuario = new JTextField();
+		textUsuario.setBounds(183, 102, 195, 26);
+		getContentPane().add(textUsuario);
+		textUsuario.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(183, 188, 195, 26);
-		getContentPane().add(passwordField);
+		passwordSenha = new JPasswordField();
+		passwordSenha.setBounds(183, 188, 195, 26);
+		getContentPane().add(passwordSenha);
 		
 		JButton btnNewButton = new JButton("Entrar");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -69,10 +69,10 @@ public class TelaLogin extends JFrame {
 		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton.setBorderPainted(false);
 		btnNewButton.setFocusable(false);
-		btnNewButton.setBounds(183, 262, 89, 23);
+		btnNewButton.setBounds(121, 262, 124, 23);
 		getContentPane().add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Registrar");
+		JButton btnNewButton_1 = new JButton("Criar conta");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaRegistro teladeregistro = new TelaRegistro();
@@ -83,7 +83,7 @@ public class TelaLogin extends JFrame {
 		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton_1.setBorderPainted(false);
 		btnNewButton_1.setFocusable(false);
-		btnNewButton_1.setBounds(289, 262, 89, 23);
+		btnNewButton_1.setBounds(314, 262, 124, 23);
 		getContentPane().add(btnNewButton_1);
 	}
 }

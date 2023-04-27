@@ -11,9 +11,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaRegistro extends JFrame {
-	private JTextField textField;
-	private JTextField textField_1;
-	private JPasswordField passwordField;
+	private JTextField textCriarUsuario;
+	private JPasswordField passwordCriarSenha;
 
 	
 
@@ -50,25 +49,20 @@ public class TelaRegistro extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(183, 80, 195, 26);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		textCriarUsuario = new JTextField();
+		textCriarUsuario.setBounds(183, 102, 195, 26);
+		getContentPane().add(textCriarUsuario);
+		textCriarUsuario.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(183, 145, 195, 26);
-		getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		passwordCriarSenha = new JPasswordField();
+		passwordCriarSenha.setBounds(183, 188, 195, 26);
+		getContentPane().add(passwordCriarSenha);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(183, 210, 195, 26);
-		getContentPane().add(passwordField);
-		
-		JButton btnNewButton = new JButton("Registrar");
+		JButton btnNewButton = new JButton("Cadastrar");
 		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton.setBorderPainted(false);
 		btnNewButton.setFocusable(false);
-		btnNewButton.setBounds(289, 281, 89, 23);
+		btnNewButton.setBounds(317, 262, 124, 23);
 		getContentPane().add(btnNewButton);
 		
 		JButton btnVoltar = new JButton("Voltar");
@@ -81,7 +75,7 @@ public class TelaRegistro extends JFrame {
 		});
 		btnVoltar.setFocusable(false);
 		btnVoltar.setBorderPainted(false);
-		btnVoltar.setBounds(183, 281, 89, 23);
+		btnVoltar.setBounds(121, 262, 124, 23);
 		getContentPane().add(btnVoltar);
 	}
 

@@ -10,6 +10,7 @@ import java.awt.Cursor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class TelaSelecPerso extends JFrame {
 
@@ -67,8 +68,16 @@ public class TelaSelecPerso extends JFrame {
 		btnPersoMasc.setContentAreaFilled(false);
 		btnPersoMasc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaSelecName criarnome1 = new TelaSelecName();
-				criarnome1.setVisible(true);
+				String pergunta1 = JOptionPane.showInputDialog("Digite seu nick");
+				
+				if (pergunta1.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Ops, digite um nick!", "Aviso", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showInputDialog("Digite seu nick");
+				} else {
+					TelaCenario cenario = new TelaCenario();
+					cenario.setVisible(true);
+					dispose();
+				}
 			}
 		});
 		btnPersoMasc.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -77,8 +86,16 @@ public class TelaSelecPerso extends JFrame {
 		JButton btnPersoFem = new JButton("");
 		btnPersoFem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaSelecName criarnome2 = new TelaSelecName();
-				criarnome2.setVisible(true);
+				String pergunta2 = JOptionPane.showInputDialog("Digite seu nick");
+				
+				if (pergunta2.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Ops, digite um nick!", "Aviso", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showInputDialog("Digite seu nick");
+				} else {
+					TelaCenario cenario = new TelaCenario();
+					cenario.setVisible(true);
+					dispose();
+				}
 			}
 		});
 		btnPersoFem.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/projetopersonagemfem.png")));

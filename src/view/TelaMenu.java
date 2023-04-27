@@ -13,6 +13,9 @@ import java.awt.Panel;
 import java.awt.ScrollPane;
 import javax.swing.JPanel;
 import java.awt.Cursor;
+import javax.swing.JLabel;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 public class TelaMenu extends JFrame {
 
@@ -38,11 +41,14 @@ public class TelaMenu extends JFrame {
 	 * Create the application.
 	 */
 	public TelaMenu() {
-		getContentPane().setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		getContentPane().setFocusable(false);
+		setResizable(false);
+		getContentPane().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		getContentPane().setEnabled(false);
-		getContentPane().setLayout(null);
 		
-		Button buttonSair = new Button("Voltar");
+		Button buttonSair = new Button("");
+		buttonSair.setBounds(377, 566, 251, 30);
+		buttonSair.setVisible(false);
 		buttonSair.setFocusable(false);
 		buttonSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -51,10 +57,12 @@ public class TelaMenu extends JFrame {
 				dispose();
 			}
 		});
-		buttonSair.setBounds(472, 411, 100, 30);
+		getContentPane().setLayout(null);
 		getContentPane().add(buttonSair);
 		
-		Button buttonConfig = new Button("Configurações");
+		Button buttonConfig = new Button("");
+		buttonConfig.setBounds(377, 457, 251, 30);
+		buttonConfig.setVisible(false);
 		buttonConfig.setFocusable(false);
 		buttonConfig.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
@@ -63,10 +71,12 @@ public class TelaMenu extends JFrame {
 			}
 		});
 		buttonConfig.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		buttonConfig.setBounds(472, 370, 100, 30);
 		getContentPane().add(buttonConfig);
 		
-		Button buttonNovoJogo = new Button("Novo Jogo");
+		Button buttonNovoJogo = new Button("");
+		buttonNovoJogo.setVisible(false);
+		buttonNovoJogo.setBounds(311, 238, 380, 36);
+		buttonNovoJogo.setFocusable(false);
 		buttonNovoJogo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaSelecPerso telaselecperso = new TelaSelecPerso();
@@ -74,19 +84,23 @@ public class TelaMenu extends JFrame {
 				dispose();
 			}
 		});
-		buttonNovoJogo.setFocusable(false);
 		buttonNovoJogo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		buttonNovoJogo.setBounds(472, 280, 100, 30);
 		getContentPane().add(buttonNovoJogo);
 		
-		Button buttonCarregar = new Button("Carregar");
+		Button buttonCarregar = new Button("");
+		buttonCarregar.setBounds(336, 347, 334, 30);
+		buttonCarregar.setVisible(false);
+		buttonCarregar.setFocusable(false);
 		buttonCarregar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		buttonCarregar.setFocusable(false);
-		buttonCarregar.setBounds(472, 325, 100, 30);
 		getContentPane().add(buttonCarregar);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(0, 0, 1014, 621);
+		lblNewLabel.setIcon(new ImageIcon(TelaMenu.class.getResource("/images/FundoTelaMenu1.png")));
+		getContentPane().add(lblNewLabel);
 		initialize();
 	}
 
