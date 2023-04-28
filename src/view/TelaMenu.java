@@ -45,57 +45,56 @@ public class TelaMenu extends JFrame {
 		setResizable(false);
 		getContentPane().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		getContentPane().setEnabled(false);
-		
-		Button buttonSair = new Button("");
-		buttonSair.setBounds(377, 566, 251, 30);
-		buttonSair.setVisible(false);
-		buttonSair.setFocusable(false);
-		buttonSair.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaLogin login = new TelaLogin();
-				login.setVisible(true);
-				dispose();
-			}
-		});
 		getContentPane().setLayout(null);
-		getContentPane().add(buttonSair);
 		
-		Button buttonConfig = new Button("");
-		buttonConfig.setBounds(377, 457, 251, 30);
-		buttonConfig.setVisible(false);
-		buttonConfig.setFocusable(false);
-		buttonConfig.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {	
-				TelaConfig config = new TelaConfig();
-				config.setVisible(true);
-			}
-		});
-		buttonConfig.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		getContentPane().add(buttonConfig);
-		
-		Button buttonNovoJogo = new Button("");
-		buttonNovoJogo.setVisible(false);
-		buttonNovoJogo.setBounds(311, 238, 380, 36);
-		buttonNovoJogo.setFocusable(false);
-		buttonNovoJogo.addActionListener(new ActionListener() {
+		JButton btnNovoJogo = new JButton("");
+		btnNovoJogo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNovoJogo.setContentAreaFilled(false);
+		btnNovoJogo.setBorderPainted(false);
+		btnNovoJogo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaSelecPerso telaselecperso = new TelaSelecPerso();
 				telaselecperso.setVisible(true);
 				dispose();
 			}
 		});
-		buttonNovoJogo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		getContentPane().add(buttonNovoJogo);
+		btnNovoJogo.setBounds(311, 238, 380, 36);
+		getContentPane().add(btnNovoJogo);
 		
-		Button buttonCarregar = new Button("");
-		buttonCarregar.setBounds(336, 347, 334, 30);
-		buttonCarregar.setVisible(false);
-		buttonCarregar.setFocusable(false);
-		buttonCarregar.addActionListener(new ActionListener() {
+		JButton btnCarregar = new JButton("");
+		btnCarregar.setFocusable(false);
+		btnCarregar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCarregar.setContentAreaFilled(false);
+		btnCarregar.setBorderPainted(false);
+		btnCarregar.setBounds(330, 347, 343, 36);
+		getContentPane().add(btnCarregar);
+		
+		JButton btnConfig = new JButton("");
+		btnConfig.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				TelaConfig config = new TelaConfig();
+				config.setVisible(true);
 			}
 		});
-		getContentPane().add(buttonCarregar);
+		btnConfig.setFocusable(false);
+		btnConfig.setContentAreaFilled(false);
+		btnConfig.setBorderPainted(false);
+		btnConfig.setBounds(376, 454, 258, 36);
+		getContentPane().add(btnConfig);
+		
+		JButton btnVoltar = new JButton("");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLogin login = new TelaLogin();
+				login.setVisible(true);
+				dispose();
+			}
+		});
+		btnVoltar.setFocusable(false);
+		btnVoltar.setContentAreaFilled(false);
+		btnVoltar.setBorderPainted(false);
+		btnVoltar.setBounds(376, 561, 258, 36);
+		getContentPane().add(btnVoltar);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(0, 0, 1014, 621);
