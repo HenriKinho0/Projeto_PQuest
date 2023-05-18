@@ -14,6 +14,8 @@ import javax.swing.JOptionPane;
 
 public class TelaSelecPerso extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * Launch the application.
 	 */
