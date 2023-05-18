@@ -46,8 +46,10 @@ public class TelaSelecPerso extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setBounds(475, 523, 100, 30);
+		JButton btnVoltar = new JButton("");
+		btnVoltar.setBorderPainted(false);
+		btnVoltar.setContentAreaFilled(false);
+		btnVoltar.setBounds(45, 551, 146, 40);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaMenu menu2 = new TelaMenu();
@@ -64,7 +66,7 @@ public class TelaSelecPerso extends JFrame {
 		btnPersoMasc.setFocusable(false);
 		btnPersoMasc.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/projetopersonagem.png")));
 		btnPersoMasc.setBorderPainted(false);
-		btnPersoMasc.setBounds(229, 150, 146, 257);
+		btnPersoMasc.setBounds(180, 188, 146, 257);
 		btnPersoMasc.setContentAreaFilled(false);
 		btnPersoMasc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -100,11 +102,16 @@ public class TelaSelecPerso extends JFrame {
 		});
 		btnPersoFem.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/projetopersonagemfem.png")));
 		btnPersoFem.setBorderPainted(false);
-		btnPersoFem.setBounds(682, 150, 146, 257);
+		btnPersoFem.setBounds(694, 188, 146, 257);
 		btnPersoFem.setContentAreaFilled(false);
 		btnPersoFem.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnPersoFem.setFocusable(false);
 		getContentPane().add(btnPersoFem);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/TelaSelecPerso.png")));
+		lblNewLabel.setBounds(0, 0, 1014, 621);
+		getContentPane().add(lblNewLabel);
 	}
 
 }

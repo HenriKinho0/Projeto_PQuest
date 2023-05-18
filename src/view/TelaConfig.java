@@ -12,6 +12,8 @@ import java.awt.event.ActionEvent;
 import java.awt.Cursor;
 import javax.swing.JProgressBar;
 import javax.swing.SwingConstants;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class TelaConfig extends JFrame {
 
@@ -49,10 +51,12 @@ public class TelaConfig extends JFrame {
 		setSize(300, 350);
 		setLocationRelativeTo(null);
 		
-		JButton btnVoltar = new JButton("Voltar");
+		JButton btnVoltar = new JButton("");
 		btnVoltar.setFocusable(false);
+		btnVoltar.setBorderPainted(false);
+		btnVoltar.setContentAreaFilled(false);
 		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnVoltar.setBounds(103, 264, 89, 23);
+		btnVoltar.setBounds(103, 264, 75, 23);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -64,6 +68,11 @@ public class TelaConfig extends JFrame {
 		JSlider slider_1 = new JSlider();
 		slider_1.setBounds(45, 60, 200, 26);
 		getContentPane().add(slider_1);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaConfig.class.getResource("/images/TelaConfigura2.png")));
+		lblNewLabel.setBounds(0, 0, 284, 311);
+		getContentPane().add(lblNewLabel);
 		
 		
 		

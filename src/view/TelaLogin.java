@@ -10,6 +10,8 @@ import javax.swing.JButton;
 import java.awt.Cursor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class TelaLogin extends JFrame {
 	private JTextField textUsuario;
@@ -50,15 +52,16 @@ public class TelaLogin extends JFrame {
 		getContentPane().setLayout(null);
 		
 		textUsuario = new JTextField();
-		textUsuario.setBounds(183, 102, 195, 26);
+		textUsuario.setBounds(69, 106, 213, 20);
 		getContentPane().add(textUsuario);
 		textUsuario.setColumns(10);
 		
 		passwordSenha = new JPasswordField();
-		passwordSenha.setBounds(183, 188, 195, 26);
+		passwordSenha.setBounds(69, 187, 213, 20);
 		getContentPane().add(passwordSenha);
 		
-		JButton btnNewButton = new JButton("Entrar");
+		JButton btnNewButton = new JButton("");
+		btnNewButton.setContentAreaFilled(false);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaMenu menu = new TelaMenu();
@@ -69,10 +72,11 @@ public class TelaLogin extends JFrame {
 		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton.setBorderPainted(false);
 		btnNewButton.setFocusable(false);
-		btnNewButton.setBounds(121, 262, 124, 23);
+		btnNewButton.setBounds(69, 280, 124, 34);
 		getContentPane().add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Criar conta");
+		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.setContentAreaFilled(false);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaRegistro teladeregistro = new TelaRegistro();
@@ -83,7 +87,12 @@ public class TelaLogin extends JFrame {
 		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton_1.setBorderPainted(false);
 		btnNewButton_1.setFocusable(false);
-		btnNewButton_1.setBounds(314, 262, 124, 23);
+		btnNewButton_1.setBounds(379, 285, 180, 29);
 		getContentPane().add(btnNewButton_1);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaLogin.class.getResource("/images/TelaLogin2.png")));
+		lblNewLabel.setBounds(0, 0, 584, 361);
+		getContentPane().add(lblNewLabel);
 	}
 }
