@@ -52,46 +52,48 @@ public class TelaLogin extends JFrame {
 		getContentPane().setLayout(null);
 		
 		textUsuario = new JTextField();
-		textUsuario.setBounds(69, 106, 213, 20);
+		textUsuario.setBounds(69, 122, 213, 20);
 		getContentPane().add(textUsuario);
 		textUsuario.setColumns(10);
 		
 		passwordSenha = new JPasswordField();
-		passwordSenha.setBounds(69, 187, 213, 20);
+		passwordSenha.setBounds(69, 197, 213, 20);
 		getContentPane().add(passwordSenha);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.setContentAreaFilled(false);
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnEntrar = new JButton("");
+		btnEntrar.setIcon(new ImageIcon(TelaLogin.class.getResource("/images/btnEntrar.png")));
+		btnEntrar.setContentAreaFilled(false);
+		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaMenu menu = new TelaMenu();
 				menu.setVisible(true);
 				dispose();
 			}
 		});
-		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton.setBorderPainted(false);
-		btnNewButton.setFocusable(false);
-		btnNewButton.setBounds(69, 280, 124, 34);
-		getContentPane().add(btnNewButton);
+		btnEntrar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnEntrar.setBorderPainted(false);
+		btnEntrar.setFocusable(false);
+		btnEntrar.setBounds(69, 280, 124, 34);
+		getContentPane().add(btnEntrar);
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.setContentAreaFilled(false);
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnCadastrar = new JButton("");
+		btnCadastrar.setIcon(new ImageIcon(TelaLogin.class.getResource("/images/btnCadastrar.png")));
+		btnCadastrar.setContentAreaFilled(false);
+		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaRegistro teladeregistro = new TelaRegistro();
 				teladeregistro.setVisible(true);
 				dispose();
 			}
 		});
-		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton_1.setBorderPainted(false);
-		btnNewButton_1.setFocusable(false);
-		btnNewButton_1.setBounds(379, 285, 180, 29);
-		getContentPane().add(btnNewButton_1);
+		btnCadastrar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCadastrar.setBorderPainted(false);
+		btnCadastrar.setFocusable(false);
+		btnCadastrar.setBounds(379, 285, 180, 29);
+		getContentPane().add(btnCadastrar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaLogin.class.getResource("/images/TelaLogin2.png")));
+		lblNewLabel.setIcon(new ImageIcon(TelaLogin.class.getResource("/images/TelaLogin3.png")));
 		lblNewLabel.setBounds(0, 0, 584, 361);
 		getContentPane().add(lblNewLabel);
 	}

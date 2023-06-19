@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class TelaSelecPerso extends JFrame {
+	private Player1 player1;
+	private Player2 player2;
 
 	/**
 	 * Launch the application.
@@ -63,14 +65,17 @@ public class TelaSelecPerso extends JFrame {
 		getContentPane().add(btnVoltar);
 		
 		JButton btnPersoMasc = new JButton("");
+		btnPersoMasc.setContentAreaFilled(false);
 		btnPersoMasc.setFocusable(false);
 		btnPersoMasc.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/projetopersonagem.png")));
 		btnPersoMasc.setBorderPainted(false);
 		btnPersoMasc.setBounds(180, 188, 146, 257);
-		btnPersoMasc.setContentAreaFilled(false);
 		btnPersoMasc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String pergunta1 = JOptionPane.showInputDialog("Digite seu nick");
+				TelaCenario cenario = new TelaCenario();
+				cenario.setVisible(true);
+				
+				/*String pergunta1 = JOptionPane.showInputDialog("Digite seu nick");
 				
 				if (pergunta1.isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Ops, digite um nick!", "Aviso", JOptionPane.WARNING_MESSAGE);
@@ -79,7 +84,8 @@ public class TelaSelecPerso extends JFrame {
 					TelaCenario cenario = new TelaCenario();
 					cenario.setVisible(true);
 					dispose();
-				}
+				}*/
+				
 			}
 		});
 		btnPersoMasc.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -88,7 +94,10 @@ public class TelaSelecPerso extends JFrame {
 		JButton btnPersoFem = new JButton("");
 		btnPersoFem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String pergunta2 = JOptionPane.showInputDialog("Digite seu nick");
+				TelaCenario2 cenario2 = new TelaCenario2();
+				cenario2.setVisible(true);
+				
+				/*String pergunta2 = JOptionPane.showInputDialog("Digite seu nick");
 				
 				if (pergunta2.isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Ops, digite um nick!", "Aviso", JOptionPane.WARNING_MESSAGE);
@@ -97,7 +106,7 @@ public class TelaSelecPerso extends JFrame {
 					TelaCenario cenario = new TelaCenario();
 					cenario.setVisible(true);
 					dispose();
-				}
+				}*/
 			}
 		});
 		btnPersoFem.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/projetopersonagemfem.png")));
@@ -108,10 +117,10 @@ public class TelaSelecPerso extends JFrame {
 		btnPersoFem.setFocusable(false);
 		getContentPane().add(btnPersoFem);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/TelaSelecPerso.png")));
-		lblNewLabel.setBounds(0, 0, 1014, 621);
-		getContentPane().add(lblNewLabel);
+		JLabel lblFundoSelec = new JLabel("");
+		lblFundoSelec.setIcon(new ImageIcon(TelaSelecPerso.class.getResource("/images/TelaSelecPerso.png")));
+		lblFundoSelec.setBounds(0, 0, 1014, 621);
+		getContentPane().add(lblFundoSelec);
 	}
 
 }

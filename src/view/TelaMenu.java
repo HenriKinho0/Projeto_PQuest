@@ -16,6 +16,11 @@ import java.awt.Cursor;
 import javax.swing.JLabel;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import javax.swing.JTextPane;
+import javax.swing.JFormattedTextField;
+import javax.swing.JToggleButton;
+import java.awt.event.MouseMotionAdapter;
+import java.awt.event.MouseEvent;
 
 public class TelaMenu extends JFrame {
 
@@ -48,9 +53,12 @@ public class TelaMenu extends JFrame {
 		getContentPane().setLayout(null);
 		
 		JButton btnNovoJogo = new JButton("");
-		btnNovoJogo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNovoJogo.setContentAreaFilled(false);
 		btnNovoJogo.setBorderPainted(false);
+		btnNovoJogo.setContentAreaFilled(false);
+		btnNovoJogo.setIcon(new ImageIcon(TelaMenu.class.getResource("/images/botaoTeste.png")));
+		btnNovoJogo.addMouseMotionListener(new MouseMotionAdapter() {
+		});
+		btnNovoJogo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNovoJogo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaSelecPerso telaselecperso = new TelaSelecPerso();
@@ -58,18 +66,21 @@ public class TelaMenu extends JFrame {
 				dispose();
 			}
 		});
-		btnNovoJogo.setBounds(311, 238, 380, 36);
+		btnNovoJogo.setBounds(317, 227, 392, 44);
 		getContentPane().add(btnNovoJogo);
 		
 		JButton btnCarregar = new JButton("");
+		btnCarregar.setIcon(new ImageIcon(TelaMenu.class.getResource("/images/btnCarregar2.png")));
 		btnCarregar.setFocusable(false);
 		btnCarregar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnCarregar.setContentAreaFilled(false);
 		btnCarregar.setBorderPainted(false);
-		btnCarregar.setBounds(330, 347, 343, 36);
+		btnCarregar.setBounds(337, 303, 354, 44);
 		getContentPane().add(btnCarregar);
 		
 		JButton btnConfig = new JButton("");
+		btnConfig.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnConfig.setIcon(new ImageIcon(TelaMenu.class.getResource("/images/btnConfig2.png")));
 		btnConfig.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaConfig config = new TelaConfig();
@@ -79,10 +90,13 @@ public class TelaMenu extends JFrame {
 		btnConfig.setFocusable(false);
 		btnConfig.setContentAreaFilled(false);
 		btnConfig.setBorderPainted(false);
-		btnConfig.setBounds(376, 454, 258, 36);
+		btnConfig.setBounds(365, 380, 292, 44);
 		getContentPane().add(btnConfig);
 		
 		JButton btnVoltar = new JButton("");
+		btnVoltar.setContentAreaFilled(false);
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setIcon(new ImageIcon(TelaMenu.class.getResource("/images/btnVoltar.png")));
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaLogin login = new TelaLogin();
@@ -91,15 +105,14 @@ public class TelaMenu extends JFrame {
 			}
 		});
 		btnVoltar.setFocusable(false);
-		btnVoltar.setContentAreaFilled(false);
 		btnVoltar.setBorderPainted(false);
-		btnVoltar.setBounds(376, 561, 258, 36);
+		btnVoltar.setBounds(386, 457, 263, 44);
 		getContentPane().add(btnVoltar);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(0, 0, 1014, 621);
-		lblNewLabel.setIcon(new ImageIcon(TelaMenu.class.getResource("/images/FundoTelaMenu1.png")));
-		getContentPane().add(lblNewLabel);
+		JLabel lblFundoTela = new JLabel("");
+		lblFundoTela.setIcon(new ImageIcon(TelaMenu.class.getResource("/images/FundoTela.png")));
+		lblFundoTela.setBounds(0, 0, 1014, 621);
+		getContentPane().add(lblFundoTela);
 		initialize();
 	}
 

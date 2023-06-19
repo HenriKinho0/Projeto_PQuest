@@ -54,23 +54,26 @@ public class TelaRegistro extends JFrame {
 		getContentPane().setLayout(null);
 		
 		textCriarUsuario = new JTextField();
-		textCriarUsuario.setBounds(64, 51, 205, 23);
+		textCriarUsuario.setBounds(71, 73, 211, 23);
 		getContentPane().add(textCriarUsuario);
 		textCriarUsuario.setColumns(10);
 		
 		passwordCriarSenha = new JPasswordField();
-		passwordCriarSenha.setBounds(64, 211, 205, 23);
+		passwordCriarSenha.setBounds(73, 219, 211, 23);
 		getContentPane().add(passwordCriarSenha);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.setContentAreaFilled(false);
-		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton.setBorderPainted(false);
-		btnNewButton.setFocusable(false);
-		btnNewButton.setBounds(355, 286, 160, 23);
-		getContentPane().add(btnNewButton);
+		JButton btnConfirmar = new JButton("");
+		btnConfirmar.setIcon(new ImageIcon(TelaRegistro.class.getResource("/images/btnConfirmar.png")));
+		btnConfirmar.setContentAreaFilled(false);
+		btnConfirmar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnConfirmar.setBorderPainted(false);
+		btnConfirmar.setFocusable(false);
+		btnConfirmar.setBounds(388, 289, 160, 23);
+		getContentPane().add(btnConfirmar);
 		
 		JButton btnVoltar = new JButton("");
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setIcon(new ImageIcon(TelaRegistro.class.getResource("/images/btnVoltarCadastro.png")));
 		btnVoltar.setContentAreaFilled(false);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -86,11 +89,11 @@ public class TelaRegistro extends JFrame {
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setBounds(64, 132, 205, 23);
+		textField.setBounds(71, 147, 211, 23);
 		getContentPane().add(textField);
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaRegistro.class.getResource("/images/TelaCadastro2.png")));
+		lblNewLabel.setIcon(new ImageIcon(TelaRegistro.class.getResource("/images/TelaCadastro3.png")));
 		lblNewLabel.setBounds(0, 0, 584, 361);
 		getContentPane().add(lblNewLabel);
 	}

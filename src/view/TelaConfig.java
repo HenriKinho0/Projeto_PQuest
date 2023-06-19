@@ -52,11 +52,12 @@ public class TelaConfig extends JFrame {
 		setLocationRelativeTo(null);
 		
 		JButton btnVoltar = new JButton("");
+		btnVoltar.setIcon(new ImageIcon(TelaConfig.class.getResource("/images/btnVoltarCadastro.png")));
 		btnVoltar.setFocusable(false);
 		btnVoltar.setBorderPainted(false);
 		btnVoltar.setContentAreaFilled(false);
 		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnVoltar.setBounds(103, 264, 75, 23);
+		btnVoltar.setBounds(88, 261, 113, 26);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -70,7 +71,7 @@ public class TelaConfig extends JFrame {
 		getContentPane().add(slider_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaConfig.class.getResource("/images/TelaConfigura2.png")));
+		lblNewLabel.setIcon(new ImageIcon(TelaConfig.class.getResource("/images/TelaConfigura4.png")));
 		lblNewLabel.setBounds(0, 0, 284, 311);
 		getContentPane().add(lblNewLabel);
 		
